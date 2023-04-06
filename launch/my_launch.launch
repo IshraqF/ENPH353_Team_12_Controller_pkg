@@ -6,4 +6,9 @@
          name="move_robot" 
          output="screen">
    	</node>
+	<node pkg="controller_pkg"
+	 type="SIFT_plate_detect.py"
+	 name="SIFT_plate_detect"
+	 output="screen">
+	</node>
 </launch>

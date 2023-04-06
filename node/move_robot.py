@@ -58,6 +58,10 @@ class LineFollower:
         """
         Algorithm to follow a line
         """
+
+        # cv2.imshow("image", cv_image)
+        # cv2.waitKey(1)
+
         grayscaled_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
         blurred_image = cv2.GaussianBlur(
             grayscaled_image, (5, 5), cv2.BORDER_DEFAULT)
