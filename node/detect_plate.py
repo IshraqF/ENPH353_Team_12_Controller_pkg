@@ -60,7 +60,7 @@ class plate_detection():
             self.done = 1
             self.inital_time = self.current_time.secs
         
-        if (self.current_time.secs > self.inital_time+100 and self.done == 1): #change this back to the desired time
+        if (self.current_time.secs > self.inital_time+61 and self.done == 1): #change this back to the desired time
             self.plate.data = "Team12,multi21,-1,FA12"
             self.pub_plate.publish(self.plate)
             self.done = 2
@@ -305,7 +305,7 @@ class plate_detection():
         if len(contours) > 2:
             sortedContours = sorted(contours, key = cv2.contourArea, reverse = True)
 
-            if cv2.contourArea(sortedContours[0]) > 30000 and cv2.contourArea(sortedContours[0]) < 50000:
+            if cv2.contourArea(sortedContours[0]) > 29000 and cv2.contourArea(sortedContours[0]) < 52000:
                 points = sortedContours[0][:, 0, :]
 
                 smallest_x_y, largest_x_smallest_y, largest_x_y, smallest_x_largest_y = self.find_corner_points(points)

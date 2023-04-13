@@ -339,7 +339,7 @@ class LineFollower:
             self.initial_time_counter = self.inital_time
         self.pub_move.publish(self.move)
         
-        if self.current_time.secs > self.inital_time+4*60 and self.done == 1: #change this back to the desired time
+        if self.current_time.secs > self.inital_time+60 and self.done == 1: #change this back to the desired time
             self.timer.data = "Team12,multi21,-1,FA12"
             self.pub_timer.publish(self.timer)
             self.done = 2
