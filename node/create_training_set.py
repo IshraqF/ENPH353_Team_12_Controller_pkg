@@ -325,7 +325,7 @@ class plate_detection():
         if len(contours) > 2:
             sortedContours = sorted(contours, key = cv2.contourArea, reverse = True)
 
-            if cv2.contourArea(sortedContours[0]) > 35000 and cv2.contourArea(sortedContours[0]) < 50000:
+            if cv2.contourArea(sortedContours[0]) > 30000 and cv2.contourArea(sortedContours[0]) < 50000:
                 points = sortedContours[0][:, 0, :]
 
                 smallest_x_y, largest_x_smallest_y, largest_x_y, smallest_x_largest_y = self.find_corner_points(points)

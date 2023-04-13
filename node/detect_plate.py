@@ -30,7 +30,7 @@ class plate_detection():
         self.timer_counter = 0
         self.current_time_counter = 0
         
-        self.conv_model = load_model('/home/fizzer/ros_ws/src/controller_pkg/node/License_PLate_Model.h5', compile = False)
+        self.conv_model = load_model('/home/fizzer/ros_ws/src/controller_pkg/node/Generated.h5', compile = False)
         # self.inital_time = 0
         self.image_sub = rospy.Subscriber(
             '/R1/pi_camera/image_raw', Image, self.callback)
