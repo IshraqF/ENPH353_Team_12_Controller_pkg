@@ -200,7 +200,7 @@ class plate_detection():
         if self.loc < 9 and count == 4:
             self.publish_plate(cv_image)
         else:
-            self.loc = 7
+            self.loc = -1
 
             
         
